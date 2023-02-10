@@ -1,0 +1,102 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    .content {
+        flex: 0 1 50%;
+        align-self: center;
+
+        .title {
+            font-weight: 500;
+            font-size: 51.2px;
+            line-height: 61px;
+            color: #ffffff;
+            max-width: 520px;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 28px;
+            }
+
+            &::before {
+                content: "";
+                background: url("../../../public/decor.svg") 0 0 / 100% no-repeat;
+                width: 122px;
+                height: 122px;
+                position: absolute;
+                top: -10px;
+                left: -34px;
+            }
+        }
+        .text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 27px;
+            max-width: 500px;
+            &:not(:last-child) {
+                margin-bottom: 33px;
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 32px;
+        }
+    }
+
+    .images {
+        display: flex;
+        gap: 9.6%;
+        max-width: 484px;
+        .column {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            .item {
+                border-radius: 50% / 29%;
+                overflow: hidden;
+                img {
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+            .item1,
+            .item4 {
+                border-radius: 50% / 29%;
+            }
+            .item3 {
+                border-radius: 50% 50% 0 50%;
+            }
+            .item2 {
+                border-radius: 50% 0 50% 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 847px) {
+    .root {
+        flex-direction: column;
+        align-items: center;
+
+        .content {
+            .title {
+                font-size: 41px;
+            }
+            .actions {
+                justify-content: center;
+            }
+        }
+    }
+}
+@media (max-width: 313px) {
+    .root {
+        .content {
+            .actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

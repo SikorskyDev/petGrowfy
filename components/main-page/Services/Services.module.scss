@@ -1,0 +1,85 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    gap: 104px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+        align-self: center;
+        max-width: 512px;
+
+        .lable {
+            align-self: flex-start;
+        }
+        .title {
+            font-weight: 500;
+            font-size: 51.2px;
+            line-height: 61px;
+            color: #ffffff;
+        }
+
+        .text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    .carts {
+        max-width: 663px;
+        display: flex;
+        max-width: 664px;
+        justify-content: space-between;
+        gap: 32px;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            &:first-child {
+                padding-top: 48px;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                background: rgba(129, 129, 139, 0.1);
+                border-radius: 30px;
+                padding: 61px 25px;
+                gap: 15px;
+
+                .title {
+                    font-weight: 400;
+                    font-size: 19.2px;
+                    line-height: 27px;
+                    color: #ffffff;
+                }
+                .text {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 969px) {
+    .root {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 969px) {
+    .root {
+        gap: 50px;
+
+        .carts {
+            flex-wrap: wrap;
+            max-width: 350px;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import "./libs/_normalize.scss";
+
+body {
+    font-weight: 300;
+    color: #9c9c9c;
+    height: 100%;
+    background-color: #0d0d11;
+}
+
+a {
+    color: #9c9c9c;
+}
+
+#__next {
+    height: 100%;
+}
+
+#__next > div {
+    height: 100vh;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+[class*="__container"] {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px; //відсутпи безпеки, контентна частина буде 1280px
+}
+
+.page {
+    flex: 1 1 auto;
+
+    .main {
+        padding-top: 150px;
+    }
+    .clients {
+        padding-top: 193px;
+        padding-bottom: 160px;
+    }
+    .whyus {
+        margin-top: 192px;
+        margin-bottom: 192px;
+    }
+    .testimonials {
+        margin-top: 192px;
+        margin-bottom: 96px;
+    }
+    .news {
+        padding: 96px 0;
+    }
+    .contactUs {
+        margin: 96px 0;
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 13, 17, 0.9);
+    z-index: 50;
+}
+
+.footer {
+    padding: 160px 0;
+}
+
+.year {
+    padding: 46px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+
+    &::before {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: rgba(129, 129, 139, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+@media (max-width: 675px) {
+    .year {
+        padding: 26px 0;
+    }
+}
+
+@media (max-width: 835px) {
+    .footer {
+        padding: 90px 0;
+    }
+}

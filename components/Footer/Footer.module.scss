@@ -1,0 +1,105 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    .desc {
+        max-width: 379px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &__logo {
+            max-width: 148px;
+            img {
+                width: 100%;
+            }
+        }
+        &__text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .pages {
+        max-width: 125px;
+
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        &__allPages {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+            ul li:hover {
+                color: #ffffff;
+                cursor: pointer;
+            }
+            ul li:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .utilityPages {
+        max-width: 208px;
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        &__list {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+            ul li:hover {
+                color: #ffffff;
+                cursor: pointer;
+            }
+            ul li:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .subscribe {
+        max-width: 377px;
+
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        &__text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &__btns {
+            margin-top: 33px;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            flex-wrap: wrap;
+            div {
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1089px) {
+    .root {
+        flex-wrap: wrap;
+        row-gap: 80px;
+        justify-content: space-evenly;
+    }
+}

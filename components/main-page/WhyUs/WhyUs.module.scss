@@ -1,0 +1,104 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+
+    .images {
+        flex: 0 1 50%;
+        display: flex;
+        position: relative;
+
+        .item {
+            overflow: hidden;
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        .item1 {
+            border-radius: 90% 0 49% 49% / 50% 0 31% 31%;
+        }
+        .item2 {
+            align-self: flex-end;
+            border-radius: 50% 50% 50% 0;
+        }
+
+        &::before {
+            content: "";
+            background: url("../../../public/decor.svg") 0 0 / 100% no-repeat;
+            width: 122px;
+            height: 122px;
+            position: absolute;
+            bottom: -10px;
+            left: -34px;
+        }
+    }
+
+    .content {
+        flex: 0 1 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+
+        .lable {
+            align-self: flex-start;
+        }
+        .title {
+            font-weight: 500;
+            font-size: 51.2px;
+            line-height: 61px;
+            color: #ffffff;
+        }
+        .text {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .list li {
+            position: relative;
+            min-height: 32px;
+            padding-left: 40px;
+            padding-top: 4px;
+            line-height: 1.5;
+        }
+        .list li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        .list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            background: rgba(129, 129, 139, 0.1) url("../../../public/whyus/li.svg") center no-repeat;
+        }
+    }
+}
+
+@media (max-width: 1086px) {
+    .root {
+        flex-wrap: wrap-reverse;
+        .images {
+            flex: 1 1 auto;
+            justify-content: space-between;
+        }
+        .content {
+            flex: 0 1 auto;
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .root{
+        .content{
+            .title{
+                font-size: 35px;
+                line-height: 45px;
+            }
+        }
+    }
+}

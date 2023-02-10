@@ -1,0 +1,39 @@
+.root {
+    padding: 52px 40px;
+    background: rgba(129, 129, 139, 0.1);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .content {
+        max-width: 373px;
+
+        .title {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 45px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .text {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+
+    .btns {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        justify-content: center;
+        div {
+            flex: 0 0 auto;
+        }
+    }
+}

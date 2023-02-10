@@ -1,0 +1,127 @@
+.root {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        &:not(:last-child) {
+            margin-bottom: 64px;
+        }
+
+        .title {
+            font-weight: 500;
+            font-size: 51.2px;
+            line-height: 61px;
+            color: #ffffff;
+        }
+        .textContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-end;
+            .text {
+                max-width: 768px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 27px;
+            }
+            .btn {
+                flex: 0 0 auto;
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .item {
+            max-width: 395px;
+            background: rgba(129, 129, 139, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+
+            .image {
+                overflow: hidden;
+                img {
+                    transform: scale(1.01);
+                }
+            }
+
+            .content {
+                padding: 40px 26px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .date {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .title {
+                    font-weight: 400;
+                    font-size: 19.2px;
+                    line-height: 27px;
+                    color: #ffffff;
+                }
+                .text {
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .readNow a {
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #3d96f4;
+                    &:hover {
+                        color: #5ea6f3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1026px) {
+    .root {
+        .content {
+            .title {
+                font-size: 41px;
+                line-height: 51px;
+            }
+            .textContainer {
+                .text {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+        }
+        .cards {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .root {
+        .content {
+            .title {
+                font-size: 35px;
+                line-height: 41px;
+            }
+            .textContainer {
+                .text {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

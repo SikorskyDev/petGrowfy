@@ -1,0 +1,120 @@
+.root {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+
+        .title {
+            font-weight: 500;
+            font-size: 51.2px;
+            line-height: 61px;
+            color: #ffffff;
+        }
+        .textContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-end;
+            .text {
+                max-width: 768px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 27px;
+            }
+            .btn {
+                flex: 0 0 auto;
+            }
+        }
+    }
+
+    .cards {
+        margin-top: 75px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+
+        .item {
+            padding: 64px 40px;
+            background: rgba(129, 129, 139, 0.1);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 33px;
+            max-width: 395px;
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                .avatar {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transform: scale(1.06);
+                    }
+                }
+                .text {
+                    .name {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #ffffff;
+                    }
+                    .company {
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 22px;
+
+                        color: #9c9c9c;
+                    }
+                }
+            }
+            .title {
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 45px;
+                color: #ffffff;
+            }
+            .text {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1026px) {
+    .root{
+
+        .content {
+
+    
+            .title {
+
+                font-size: 41px;
+                line-height: 51px;
+
+            }
+            .textContainer {
+
+                .text {
+
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+
+            }
+        }
+
+
+        .cards{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    }
+}

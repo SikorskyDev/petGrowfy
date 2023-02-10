@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 16px 30px;
+    border-radius: 50px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    transition: background-color 0.3s ease 0s;
+    cursor: pointer;
+    // background-color: #3d96f4;
+    // &:hover {
+    //     background-color: #6aaef7;
+    // }
+
+    @media (max-width: 991.98px) {
+        padding: 14px 20px;
+    }
+    @media (max-width: 549px) {
+        padding: 10px 15px;
+        letter-spacing: 1px;
+    }
+}
